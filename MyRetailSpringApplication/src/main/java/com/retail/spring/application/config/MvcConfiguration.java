@@ -62,10 +62,10 @@ public class MvcConfiguration  implements WebMvcConfigurer {
 		SimpleClientHttpRequestFactory clientHttpRequestFactory
                       = new SimpleClientHttpRequestFactory();
 		//Connect timeout
-		clientHttpRequestFactory.setConnectTimeout(1);
+		clientHttpRequestFactory.setConnectTimeout(10_000);
      
 		//Read timeout
-		clientHttpRequestFactory.setReadTimeout(1);
+		clientHttpRequestFactory.setReadTimeout(10_000);
 		return clientHttpRequestFactory;
 	}
 	@Bean
